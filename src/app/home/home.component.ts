@@ -7,5 +7,5 @@ import { Employee } from '../models/employee.model';
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
-  model = new Employee("Peter", "Pan");
+  model = new Employee("", "Pan");
 }

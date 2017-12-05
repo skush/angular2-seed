@@ -6,14 +6,9 @@
             <input #firstName="ngModel" required type="text" class="form-controll"
                 name="firstName"
                 [(ngModel)]="model.firstName" >
+            <div *ngIf="firstName.invalid" class="alert alert-danger">
+                First name is required.
+            </div>
         </div>
      </form>
-     <h3>ngModel properties: </h3>
-     <h4 *ngIf="firstName.valid"> valid </h4>
-     <h4 *ngIf="firstName.invalid"> invalid </h4>
-     <h4 *ngIf="firstName.touched"> touched </h4>
-     <h4 *ngIf="firstName.untouched"> untouched </h4>
-     <h4 *ngIf="firstName.pristine"> prestine </h4>
-     <h4 *ngIf="firstName.dirty"> dirty </h4>
-
 </div>
