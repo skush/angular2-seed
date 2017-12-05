@@ -3,13 +3,17 @@
     <form #form="ngForm" novalidate>
         <div class="form-group">
             <label>First Name</label>
-            <input #firstName required type="text" class="form-controll"
+            <input #firstName="ngModel" required type="text" class="form-controll"
                 name="firstName"
                 [(ngModel)]="model.firstName" >
         </div>
+     </form>
+     <h3>ngModel properties: </h3>
+     <h4 *ngIf="firstName.valid"> valid </h4>
+     <h4 *ngIf="firstName.invalid"> invalid </h4>
+     <h4 *ngIf="firstName.touched"> touched </h4>
+     <h4 *ngIf="firstName.untouched"> untouched </h4>
+     <h4 *ngIf="firstName.pristine"> prestine </h4>
+     <h4 *ngIf="firstName.dirty"> dirty </h4>
 
-        <h3>Classes</h3>
-        <!-- <h4>{{ model.firstName }}</h4> -->
-        <h4>{{ firstName.className }}</h4>
-    </form>
 </div>
