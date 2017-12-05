@@ -6,7 +6,7 @@
             <input #firstName="ngModel" required type="text" class="form-controll"
                 name="firstName"
                 [(ngModel)]="model.firstName" >
-            <div *ngIf="firstName.invalid" class="alert alert-danger">
+            <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger">
                 First name is required.
             </div>
         </div>
