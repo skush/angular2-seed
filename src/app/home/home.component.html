@@ -1,2 +1,15 @@
-<h3>Home Component</h3>
-<p>Welcome to Angular Seed</p>
+<div class="container">
+    <h3>Employee Form</h3>
+    <form #form="ngForm" novalidate>
+        <div class="form-group">
+            <label>First Name</label>
+            <input #firstName required type="text" class="form-controll"
+                name="firstName"
+                [(ngModel)]="model.firstName" >
+        </div>
+
+        <h3>Classes</h3>
+        <!-- <h4>{{ model.firstName }}</h4> -->
+        <h4>{{ firstName.className }}</h4>
+    </form>
+</div>
